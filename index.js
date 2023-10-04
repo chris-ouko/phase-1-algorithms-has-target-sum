@@ -1,5 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // Initial position of the array.
+  for (let i=0;i<array.length;i++){
+    // Compare the position with the rest of the positions
+    for (let j=i+1;j<array.length;j++){
+      if(array[i] + array[j] === target){ //return true
+        return true
+      }
+    } 
+  }
+  
+  return false
+  // Example usage:
+  const numbers = [2, 7, 11, 15];
+  const targetSum = 9;
+  console.log(hasTargetSum(numbers, targetSum)); // Should return true (2 + 7 = 9)
+  
 }
 
 /* 
@@ -8,7 +24,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
+ This  function takes two parameters, an array and a target number
+ Return true if the any two numbers in the array add up to target.
+ Or else return false. 
 
 /*
   Add written explanation of your solution here
